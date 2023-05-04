@@ -1,4 +1,4 @@
-# employee-pwd-generator
+# Employee Password Generator
 
 ## Description
 A Javascript function that generates a randomized password that's based on customized criteria
