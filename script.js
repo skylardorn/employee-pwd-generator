@@ -1,5 +1,5 @@
 // Assignment Code
-var generateBtn = document.querySelector("#generate");
+let generateBtn = document.querySelector("#generate");
 
 // password criteria bank
 const upperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
@@ -13,18 +13,14 @@ function generatePassword() {
   let promptChar = prompt('How many characters should the password be? Choose between 8 - 128');
   
   // 
-  let upperCase = confirm("Would you like to add capital letters?");
-  let lowerCase = confirm("Would you like to add lowercase letters?");
-  let specialChar = confirm("Would you like to add special characters?");
-  let num = confirm("Would you like to add numbers?");
   
-  if (promptChar>8 && promptChar<128) {
+  if (promptChar<8 && promptChar>128) {
     alert("Nah, Cant do that.");
   } else {
-    upperCase();
-    lowerCase();
-    specialChar();
-    num();
+    let upperCase = confirm("Would you like to add capital letters?");
+    let lowerCase = confirm("Would you like to add lowercase letters?");
+    let specialChar = confirm("Would you like to add special characters?");
+    let num = confirm("Would you like to add numbers?");
   };
   
   const criteriaBank = [upperCase, lowerCase, specialChar, num];
@@ -50,4 +46,4 @@ function writePassword() {
 }
 
 
-generateBtn.addEventListener('click', writePassword());
+generateBtn.addEventListener("click", writePassword);
